@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey</title>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      padding: 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      max-width: 520px;
+      width: 100%;
+      text-align: center;
+    }
+    button {
+      background: #0f766e;
+      color: white;
+      border: none;
+      padding: 14px 24px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 16px;
+    }
+    button:hover {
+      background: #115e59;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>Survey</h1>
+    <p>Click the button below to begin.</p>
+    <button id="startBtn">Start survey</button>
+  </div>
+
+  <script>
+    const links = [
+      "PASTE_NEW_SURVEY_LINK_1_HERE",
+      "PASTE_NEW_SURVEY_LINK_2_HERE"
+    ];
+
+    document.getElementById("startBtn").addEventListener("click", function () {
+      const randomIndex = Math.floor(Math.random() * links.length);
+      window.location.replace(links[randomIndex]);
+    });
+  </script>
+</body>
+</html>
